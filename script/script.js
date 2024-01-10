@@ -1,4 +1,80 @@
 
+const debounce = function(func, wait, immediate) {
+  let timeout;
+  return function(...args) {
+      const context = this;
+      const later = function() {
+          timeout = null;
+          if(!immediate) func.apply(context, args)
+      };
+      const callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if(callNow) func.apply(context, args);
+  };
+};
+
+
+// const target = document.querySelectorAll('[data-anime]');
+// const animationClass = 'animate';
+
+// function animeScroll() {
+//   const windowTop = window.scrollY + ((window.innerHeight * 3) /4);
+
+//   target.forEach(function(element){
+//     const elementTop = element.getBoundingClientRect().top + window.scrollY;
+    
+//     if((windowTop) > elementTop){
+//       element.classList.add(animationClass);
+//     } else{
+//       element.classList.remove(animationClass);
+//     }
+//   })
+// }
+
+// animeScroll()
+
+// if(target.length){
+//   window.addEventListener('scroll', debounce(function() {
+//     animeScroll();
+//   },150))
+// }
+
+// Função para verificar se um elemento está visível na tela
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top <= window.innerHeight &&
+    rect.bottom >= 0
+  );
+}
+
+// Função para adicionar a classe "visible" aos elementos quando estiverem visíveis
+const target = document.querySelectorAll('.s-about__list');
+
+function handleScroll() {
+  target.forEach(function(element) {
+    if (isElementInViewport(element)) {
+      element.classList.add('visible');
+    }
+    else{
+      element.classList.remove('visible');
+    }
+  });
+}
+
+
+// window.addEventListener('scroll', handleScroll);
+
+handleScroll();
+if(target.length){
+  window.addEventListener('scroll', debounce(function() {
+    handleScroll();
+  },150))
+}
+
+
+
 
 // MENU BURGUER
 let show = true;
