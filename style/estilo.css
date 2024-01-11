@@ -125,7 +125,7 @@ header{
 .s-home h1{
 
   padding-left: 15px;
-
+    text-align: center;
     position: relative;
     font-size: clamp(1em, 1.5em + 2.1vw, 4em);
     max-width: 1140px;
