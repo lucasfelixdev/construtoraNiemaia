@@ -30,10 +30,10 @@
                         
                         <nav>
                             <ul class="navUlDestk">
-                                <li><a  href="#">Home</a></li>
-                                <li><a  href="#">Quem Somos</a></li>
+                                <li><a  href="#home">Home</a></li>
+                                <li><a  href="#sobre">Quem Somos</a></li>
                                 <li><a  href="#">Projetos</a></li>
-                                <li><a  href="#">Contato</a></li>
+                                <li><a  href="#contato">Contato</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -42,7 +42,7 @@
     </div>
     </header>
     <main>
-        <section class="section-home__container">
+        <section id="home" class="section-home__container">
             <div class="s-home">
                 <div class="s-home__title">
                 <h1>Comprometidos com excelência <span>desde a fundação.</span></h1>
@@ -50,10 +50,12 @@
             </div>
         </section>
 
-        <section class="s-about">
-            <div class="s-grid">
+        <section id="sobre" class="s-about about">
+            <div class="s-grid s-about-flex">
+                <div class="imagem">
+                <img class="abt-us" src="./img/engenheiro-about-us.png" alt="d">
+                </div>
                 <div class="s-about__content">
-                    
                     <div class="s-about__list" data-anime="left">
                         <img src="./icons/flag.svg" alt="Fundada">
                         <h4>Fundada 12 de Fevereiro em 2009</h4>
@@ -92,8 +94,11 @@
             </div>
         </section>
         
-    </main>
+        <section id="contato" class="s-contact">
 
+        </section>
+    </main>
+    <script src="./script/responsividade.js"></script>
     <script src="./script/script.js"></script>
 </body>
 </html>

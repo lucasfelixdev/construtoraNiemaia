@@ -14,32 +14,6 @@ const debounce = function(func, wait, immediate) {
   };
 };
 
-
-// const target = document.querySelectorAll('[data-anime]');
-// const animationClass = 'animate';
-
-// function animeScroll() {
-//   const windowTop = window.scrollY + ((window.innerHeight * 3) /4);
-
-//   target.forEach(function(element){
-//     const elementTop = element.getBoundingClientRect().top + window.scrollY;
-    
-//     if((windowTop) > elementTop){
-//       element.classList.add(animationClass);
-//     } else{
-//       element.classList.remove(animationClass);
-//     }
-//   })
-// }
-
-// animeScroll()
-
-// if(target.length){
-//   window.addEventListener('scroll', debounce(function() {
-//     animeScroll();
-//   },150))
-// }
-
 // Função para verificar se um elemento está visível na tela
 function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();
@@ -51,43 +25,30 @@ function isElementInViewport(el) {
 
 // Função para adicionar a classe "visible" aos elementos quando estiverem visíveis
 const target = document.querySelectorAll('.s-about__list');
+const targetIMG = document.querySelectorAll('.abt-us');
 
 function handleScroll() {
+
   target.forEach(function(element) {
     if (isElementInViewport(element)) {
       element.classList.add('visible');
     }
-    else{
-      element.classList.remove('visible');
+  });
+
+  targetIMG.forEach(function (element) {
+    if (isElementInViewport(element)) {
+      element.classList.add('ease');
     }
   });
 }
 
 
-// window.addEventListener('scroll', handleScroll);
-
 handleScroll();
-if(target.length){
+if(target.length && targetIMG.length){
   window.addEventListener('scroll', debounce(function() {
     handleScroll();
-  },150))
+  },130))
 }
-
-
-
-
-// MENU BURGUER
-let show = true;
-const menuSection = document.querySelector(".nav__Menu")
-const menuToggle = document.querySelector(".menu-toggle")
-
-menuToggle.addEventListener("click", () =>{
-  
-  document.body.style.overflow = show ? "hidden" : "initial"
-  
-  menuSection.classList.toggle("on", show)
-  show = !show;
-})
 
 
 // EVENTO NAV BAR 
@@ -106,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var scrollPercentage = (scrollTop / (bodyHeight - windowHeight)) * 100;
     // Ajusta a opacidade com base na porcentagem de rolagem
     var opacity = Math.min(1, scrollPercentage / 40); // Máximo de 1 de opacidade após 50% de rolagem
-    navbar.style.backgroundColor = `rgba(255, 246, 246, ${opacity})`;
+    navbar.style.backgroundColor = `rgba(245, 245, 245, ${opacity})`;
 
    // ALTERA COR DOS LINKS DE ACORDO COM A ROLAGEM
 
