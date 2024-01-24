@@ -10,8 +10,15 @@
         <link rel="icon" href="./icons/favicon.svg" type="image/x-icon">
         
     
-        <!-- IMPORT CSS NATIVO PROJETO -->
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        
+        <!-- Tailwind -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"  rel="stylesheet" />
+        
+        <!-- CSS NATIVO -->
         <link rel="stylesheet" type="text/css" href="./style/estilo.css">
+
     </head>
 <body>
     <header>
@@ -32,7 +39,7 @@
                             <ul class="navUlDestk">
                                 <li><a  href="#home">Home</a></li>
                                 <li><a  href="#sobre">Quem Somos</a></li>
-                                <li><a  href="#">Projetos</a></li>
+                                <li><a  href="#projetos">Projetos</a></li>
                                 <li><a  href="#contato">Contato</a></li>
                             </ul>
                         </nav>
@@ -50,55 +57,195 @@
             </div>
         </section>
 
-        <section id="sobre" class="s-about about">
-            <div class="s-grid s-about-flex">
-                <div class="imagem">
-                <img class="abt-us" src="./img/engenheiro-about-us.png" alt="d">
+        <section id="sobre" class="s-about">
+            <div class="s-grid">
+                <div class="s-about-flex">
+
+                    <div class="imagem leftIMG">
+                            <img class="abt-us leftIMG" src="./img/engenheiro-about-us.png" alt="d">
+                    </div>
+
+                    <div class="s-about__content">
+                        <div class="s-about__list left0">
+                            <img src="./icons/flag.svg" alt="Fundada">
+                            <h4>Fundada 12 de Fevereiro em 2009</h4>
+                        </div>
+
+                        <div class="s-about__list left1">
+                            <img src="./icons/star.svg" alt="Icone de diamante representando alta relevância">
+                            <h4>A maior construtora do Sertão e Alto Sertão paraibano, <span>destaque para a grande obra da Transposição do rio São Francisco (há 9 anos).</span> </h4>
+                        </div>
+
+                        <div class="s-about__list left2">
+                            <img src="./icons/map.svg" alt="Icone de mapa">
+                            <h4>Atuação em vários estados do Norte e Nordeste</h4>
+                        </div>
+
+                        <div class="s-about__list left3" >
+                            <img src="./icons/check.svg" alt="Icone de lista de itens">
+                            <h4>Oferece serviços como: terraplanagem, pavimentação asfáltica, barragens, obras estruturais, concretagem, loteamentos e urbanização.</h4>
+                        </div>
+
+                        <div class="s-about__list left4">
+                            <img src="./icons/top.svg" alt="Maior Construtora">
+                            <h4>+15 anos de experiência</h4>
+                        </div>
+
+                        <div class="s-about__list left5">
+                            <img src="./icons/peoples.svg" alt="Maior Construtora">
+                            <h4>Mais de 50 clientes atendidos</h4>
+                        </div>
+
+                        <div class="s-about__list left6">
+                            <img src="./icons/ambiental.svg" alt="Maior Construtora">
+                            <h4>Focados em responsabilidade social e ambiental</h4>
+                        </div>
+                        
+                    </div>
                 </div>
-                <div class="s-about__content">
-                    <div class="s-about__list" data-anime="left">
-                        <img src="./icons/flag.svg" alt="Fundada">
-                        <h4>Fundada 12 de Fevereiro em 2009</h4>
-                    </div>
+            </div>
+        </section>
+        <section class="s-conceito">
+            <div class="s-grid">
+                <div class="s-conceito__content">
 
-                    <div class="s-about__list" data-anime="left">
-                        <img src="./icons/star.svg" alt="Icone de diamante representando alta relevância">
-                        <h4>A maior construtora do Sertão e Alto Sertão paraibano, com destaque para a grande obra da Transposição do rio São Francisco (há 9 anos)</h4>
-                    </div>
+                    
+                    <img  class="left-concept" src="./icons/logo Vertical.svg" alt="logo da empresa Niemaia">
+                    
 
-                    <div class="s-about__list" data-anime="left">
-                        <img src="./icons/map.svg" alt="Icone de mapa">
-                        <h4>Atuação em vários estados do Norte e Nordeste</h4>
-                    </div>
+                    <h4 class="right-concept">
+                        O nome da empresa foi inspirado na história de Neemias, conforme descrita na Bíblia. <span>Neemias</span>, um servo de Deus, foi guiado para a nobre missão de reconstruir os muros de Jerusalém com o objetivo primordial de proteger a cidade.
+                    </h4>
+                </div>
+            </div>
+        </section>
 
-                    <div class="s-about__list" data-anime="left">
-                        <img src="./icons/check.svg" alt="Icone de lista de itens">
-                        <h4>Oferece serviços como: terraplanagem, pavimentação asfáltica, barragens, obras estruturais, concretagem, loteamentos e urbanização.</h4>
-                    </div>
 
-                    <div class="s-about__list" data-anime="left">
-                        <img src="./icons/top.svg" alt="Maior Construtora">
-                        <h4>+15 anos de experiência</h4>
-                    </div>
+        <section id="projetos" class="s-projects">
+            <div class="s-projects__contents">
+                <h2 class="spotlight">Onde há obras, ali estamos!</h2>
+                <div class="slider topFader">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper wrap">
+                            <div class="swiper-slide">
 
-                    <div class="s-about__list" data-anime="left">
-                        <img src="./icons/peoples.svg" alt="Maior Construtora">
-                        <h4>Mais de 50 clientes atendidos</h4>
-                    </div>
+                                <div class="content-img">                          
+                                    <img src="./img/slider/MELHORADO---01.png" alt="">
+                                    <div class="overlay"></div>
+                                </div>
 
-                    <div class="s-about__list" data-anime="left">
-                        <img src="./icons/ambiental.svg" alt="Maior Construtora">
-                        <h4>Focados em responsabilidade social e ambiental</h4>
+                                <div class="texts">
+                                    <div class="title">
+                                        <img src="./icons/geo-alt-fill.svg" alt="">
+                                        <h3>Rio São Francisco. 
+                                        </h3></div>
+
+                                    <p>
+                                        Revestimento da geomembrana na transposição do rio São Francisco. 
+
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="content-img">                          
+                                    <img src="./img/slider/MELHORADO---2.png" alt="">
+                                    <div class="overlay"></div>
+                                </div>
+                                <div class="texts">
+                                    <div class="title">
+                                        <img src="./icons/geo-alt-fill.svg" alt="">
+                                        <h3>Petrolândia</h3>
+                                    </div>
+
+                                    <p>
+                                        Caminhão betoneira transportando concreto. 
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="content-img">                          
+                                    <img src="./img/slider/MELHORADO---3.png" alt="">
+                                    <div class="overlay"></div>
+                                </div>
+                                <div class="texts">
+                                    <div class="title">
+                                        <img src="./icons/geo-alt-fill.svg" alt="">
+                                        <h3>Petrolina</h3></div>
+
+                                    <p>
+                                        Transporte de equipamentos pesados. Com muito profissionalismo e responsabilidade.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="content-img">                          
+                                    <img src="./img/slider/MELHORADO---4.png" alt="">
+                                    <div class="overlay"></div>
+                                </div>
+                                <div class="texts">
+                                    <div class="title">
+                                        <img src="./icons/geo-alt-fill.svg" alt="">
+                                        <h3>Natal</h3></div>
+
+                                    <p>
+                                        Transporte de equipamentos pesados. Para execução de mais uma obra!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <section id="contato" class="s-contact">
 
+        <section id="contato" class="s-contact">
+            <div class="s-grid s-grid_contact">
+                <div class="s-contact__form">  
+                    <div class="infos_contact">
+                        <div class="responsive-contact">
+
+                               <div class="img_contact-div rigt-car">
+                                    <img src="./img/Maquinario(contato).png" alt="">
+                               </div>
+
+                               <div class="background spotlight">
+                                    <div class="num">
+                                        <h3>(83) 9.8883-0017</h3>
+                                    </div>
+
+                                    <div class="mail">
+                                        <h3>rh@construtoraniemaia.com.br</h3>
+                                    </div>
+
+                                    <div class="insta">
+                                        <h3>@construtoraniemaia</h3>
+                                    </div>
+                                </div>
+                        </div>
+
+                    </div>
+                </div>               
+            </div>
         </section>
     </main>
-    <script src="./script/responsividade.js"></script>
+
+    <footer>
+            <div class="s-grid container-footer">
+                <div class="info-footer">
+                    <p>Desenvolvido por Lucasfelixdev | Site em desenvolvimento...</p>
+                </div>
+            </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./script/script.js"></script>
+    <script src="./script/responsividade.js"></script>
+    
 </body>
 </html>

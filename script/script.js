@@ -1,54 +1,146 @@
 
-const debounce = function(func, wait, immediate) {
-  let timeout;
-  return function(...args) {
-      const context = this;
-      const later = function() {
-          timeout = null;
-          if(!immediate) func.apply(context, args)
-      };
-      const callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if(callNow) func.apply(context, args);
-  };
-};
-
-// Função para verificar se um elemento está visível na tela
-function isElementInViewport(el) {
-  var rect = el.getBoundingClientRect();
-  return (
-    rect.top <= window.innerHeight &&
-    rect.bottom >= 0
-  );
-}
-
-// Função para adicionar a classe "visible" aos elementos quando estiverem visíveis
-const target = document.querySelectorAll('.s-about__list');
-const targetIMG = document.querySelectorAll('.abt-us');
-
-function handleScroll() {
-
-  target.forEach(function(element) {
-    if (isElementInViewport(element)) {
-      element.classList.add('visible');
-    }
-  });
-
-  targetIMG.forEach(function (element) {
-    if (isElementInViewport(element)) {
-      element.classList.add('ease');
-    }
-  });
-}
 
 
-handleScroll();
-if(target.length && targetIMG.length){
-  window.addEventListener('scroll', debounce(function() {
-    handleScroll();
-  },130))
-}
+window.revelar = ScrollReveal({
+  // Reset true para animação repetir
+  reset:false
+})
+
+const duracao = 700;
+
+revelar.reveal('.spotlight',
+{
+  duration: 2000,
+  distance: '0px',
+  opacity: 0,
+  delay: 850
+})
+
+revelar.reveal('.topFader', 
+{
+    duration: 2500,
+    distance: '700px',
+    origin: 'bottom',
+    easing: 'ease',
+    
+})
+
+revelar.reveal('.rigt-car', 
+{
+    duration: 1800,
+    distance: '1000px',
+    origin: 'right',
+    easing: 'ease',
+    
+})
+
+revelar.reveal('.left-concept', 
+{
+    duration: 600,
+    distance: '100px',
+    origin: 'left',
+    easing: 'ease-out',
+    
+})
+
+revelar.reveal('.right-concept', 
+{
+    duration: 600,
+    distance: '150px',
+    origin: 'right',
+    easing: 'ease-out',
+    
+})
+
+revelar.reveal('.leftIMG', 
+{
+    duration: 1500,
+    distance: '100px',
+    origin: 'left',
+    delay: 1700,
+    easing: 'ease-out',
+    
+})
+
+revelar.reveal('.left0', 
+{
+    duration: duracao,
+    distance: '80px',
+    origin: 'left',
+    delay: 1500,
+    easing: 'ease-out',
+    
+})
+
+revelar.reveal('.left1', 
+{
+    duration: duracao,
+    distance: '100px',
+    origin: 'left',
+    delay: 1300,
+    easing: 'ease-out'
+    
+})
+
+revelar.reveal('.left2', 
+{
+    duration: duracao,
+    distance: '100px',
+    origin: 'left',
+    delay: 1100,
+    easing: 'ease-out'
+    
+})
+
+revelar.reveal('.left3', 
+{
+    duration: duracao,
+    distance: '100px',
+    origin: 'left',
+    delay: 900,
+    easing: 'ease-out'
+    
+})
+
+revelar.reveal('.left4', 
+{
+    duration: duracao,
+    distance: '100px',
+    origin: 'left',
+    delay: 700,
+    easing: 'ease-out'
+    
+})
+
+revelar.reveal('.left5', 
+{
+    duration: duracao,
+    distance: '100px',
+    origin: 'left',
+    delay: 500,
+    easing: 'ease-out'
+    
+})
+
+revelar.reveal('.left6', 
+{
+    duration: duracao,
+    distance: '100px',
+    origin: 'left',
+    delay: 300,
+    easing: 'ease-out'
+    
+})
+
+revelar.reveal('.left7', 
+{
+    duration: duracao,
+    distance: '100px',
+    origin: 'left',
+    delay: 100,
+    easing: 'ease-out'
+    
+})
 
 
 // EVENTO NAV BAR 
@@ -99,3 +191,54 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
   
+
+
+
+
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        primary: {"50":"#fff7ed","100":"#ffedd5","200":"#fed7aa","300":"#fdba74","400":"#fb923c","500":"#f97316","600":"#ea580c","700":"#c2410c","800":"#9a3412","900":"#7c2d12","950":"#431407"}
+      }
+    },
+    fontFamily: {
+      'body': [
+    'Montserrat Alternates', 
+    'ui-sans-serif', 
+    'system-ui', 
+    '-apple-system', 
+    'system-ui', 
+    'Segoe UI', 
+    'Roboto', 
+    'Helvetica Neue', 
+    'Arial', 
+    'Noto Sans', 
+    'sans-serif', 
+    'Apple Color Emoji', 
+    'Segoe UI Emoji', 
+    'Segoe UI Symbol', 
+    'Noto Color Emoji'
+  ],
+      'sans': [
+    'Inter', 
+    'ui-sans-serif', 
+    'system-ui', 
+    '-apple-system', 
+    'system-ui', 
+    'Segoe UI', 
+    'Roboto', 
+    'Helvetica Neue', 
+    'Arial', 
+    'Noto Sans', 
+    'sans-serif', 
+    'Apple Color Emoji', 
+    'Segoe UI Emoji', 
+    'Segoe UI Symbol', 
+    'Noto Color Emoji'
+  ]
+    }
+  }
+}
+
