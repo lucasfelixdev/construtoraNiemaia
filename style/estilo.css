@@ -383,6 +383,7 @@ section h1 span{
   /* <--------------- CONTATO --------------------> */
 
 .s-contact{
+  overflow-y: hidden;
   margin-top: -50px;
   justify-content: center;
   align-items: center;
@@ -393,7 +394,7 @@ section h1 span{
 }
 
 .s-contact__form{
-  padding-top: 100px;
+  padding-top: 250px;
   padding-bottom: 150px;
   margin: 0 auto;
   height: 100vh;
@@ -581,7 +582,7 @@ section h1 span{
     position:absolute;
     z-index: 2;
     top: 250px;
-    left: -2.0%;
+    left: 3.0%;
   }
 
   .img_contact-div img,
