@@ -340,7 +340,7 @@ section h1 span{
         background-attachment: fixed;
         background-size: cover;
         background-position: top top;
-        opacity: 0.7; 
+        opacity: 1; 
         position: absolute;
         top: 0;
         right: 0;
