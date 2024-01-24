@@ -6,20 +6,20 @@ window.revelar = ScrollReveal({
   reset:false
 })
 
-const duracao = 700;
+const duracao = 500;
 
 revelar.reveal('.spotlight',
 {
-  duration: 2000,
+  duration: 500,
   distance: '0px',
   opacity: 0,
-  delay: 850
+  delay: 550
 })
 
 revelar.reveal('.topFader', 
 {
-    duration: 2500,
-    distance: '700px',
+    duration: 800,
+    distance: '50px',
     origin: 'bottom',
     easing: 'ease',
     
@@ -54,10 +54,10 @@ revelar.reveal('.right-concept',
 
 revelar.reveal('.leftIMG', 
 {
-    duration: 1500,
+    duration: 800,
     distance: '100px',
     origin: 'left',
-    delay: 1700,
+    delay: 1000,
     easing: 'ease-out',
     
 })

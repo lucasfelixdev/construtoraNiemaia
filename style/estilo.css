@@ -9,12 +9,15 @@
 }
 
 html{
-  background-color: var(--footer);
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+    background-color: var(--footer);
+    scroll-behavior: smooth;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+html,body, #sobre, #contato, #projetos, #home{
+  overflow-x: hidden;
 }
 
  /* --------- SCROLL BAR --------- */
@@ -639,8 +642,8 @@ section h1 span{
       background: linear-gradient(0deg, rgba(255,255,255,1) 40%, rgba(255,255,255,0) 100%);
       z-index: 1;
       opacity: 0;
-      animation: slideAnimation 1.0s ease-out forwards;
-      animation-delay: 2.1s;
+      animation: slideAnimation 0.8s ease-out forwards;
+    animation-delay: 1.3s;
   } 
   
   @keyframes slideAnimation {
@@ -750,7 +753,18 @@ section h1 span{
     }  
     }
 
-@media (max-width: 698px){.s-about-flex {padding: 40% 0 calc(100vh + 26%) 0;}}
+@media (max-width: 698px){
+  .s-projects__contents {
+   
+    padding: 130px 0 50px 0;
+  }
+  .img_contact-div{
+    top: 210px;
+    left: -9%;
+  }
+  .s-about-flex {padding: 50% 0 calc(100vh + 50%) 0;}
+
+}
 
 footer{
   padding: 0;
