@@ -1,3 +1,4 @@
+// document.oncontextmenu = document.body.oncontextmenu = function() {return false;}
 
 const CACHE_NAME = 'my-site-cache-v1';
 const urlsToCache = [
@@ -100,7 +101,7 @@ revelar.reveal('.left0',
     duration: duracao,
     distance: '80px',
     origin: 'left',
-    delay: 1500,
+    delay: 50,
     easing: 'ease-out',
     
 })
@@ -110,7 +111,7 @@ revelar.reveal('.left1',
     duration: duracao,
     distance: '100px',
     origin: 'left',
-    delay: 1300,
+    delay: 150,
     easing: 'ease-out'
     
 })
@@ -120,7 +121,7 @@ revelar.reveal('.left2',
     duration: duracao,
     distance: '100px',
     origin: 'left',
-    delay: 1100,
+    delay: 250,
     easing: 'ease-out'
     
 })
@@ -130,7 +131,7 @@ revelar.reveal('.left3',
     duration: duracao,
     distance: '100px',
     origin: 'left',
-    delay: 900,
+    delay: 350,
     easing: 'ease-out'
     
 })
@@ -140,7 +141,7 @@ revelar.reveal('.left4',
     duration: duracao,
     distance: '100px',
     origin: 'left',
-    delay: 700,
+    delay: 450,
     easing: 'ease-out'
     
 })
@@ -150,7 +151,7 @@ revelar.reveal('.left5',
     duration: duracao,
     distance: '100px',
     origin: 'left',
-    delay: 500,
+    delay: 550,
     easing: 'ease-out'
     
 })
@@ -160,17 +161,7 @@ revelar.reveal('.left6',
     duration: duracao,
     distance: '100px',
     origin: 'left',
-    delay: 300,
-    easing: 'ease-out'
-    
-})
-
-revelar.reveal('.left7', 
-{
-    duration: duracao,
-    distance: '100px',
-    origin: 'left',
-    delay: 100,
+    delay: 650,
     easing: 'ease-out'
     
 })
