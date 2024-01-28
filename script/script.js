@@ -5,7 +5,8 @@ const urlsToCache = [
   '/',
   '/style.css',
   '/script.js', 
-  '/responsividade.js'
+  '/responsividade.js', 
+  '/swiper-bundle.min.css'
 ];
 
 self.addEventListener('install', event => {
@@ -24,7 +25,7 @@ self.addEventListener('fetch', event => {
 
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service-worker.js')
+  navigator.serviceWorker.register('./service-worker.js')
     .then(registration => {
       console.log('Service Worker registrado com sucesso:', registration);
     })
