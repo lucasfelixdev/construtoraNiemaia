@@ -45,15 +45,15 @@ const duracao = 500;
 
 revelar.reveal('.spotlight',
 {
-  duration: 500,
+  duration: 800,
   distance: '0px',
   opacity: 0,
-  delay: 550
+  delay: 750
 })
 
 revelar.reveal('.topFader', 
 {
-    duration: 800,
+    duration: 2000,
     distance: '50px',
     origin: 'bottom',
     easing: 'ease',
